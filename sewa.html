@@ -73,35 +73,95 @@
       </div>
       <div class="container mt-4">
         <div class="row">
-            <h5 class="mb-3"> <b>INPUT SEWA </b> </h5>
+            <h5 class="mb-4 text-center"> <b>INPUT SEWA </b> </h5>
             <div class="col-md-6 col-sm-12 col xs-12">
-              <label for="pp">Pilih Pahlawan</label>
-               <select class="form-control mt-2 mb-3" id="pp">
-                <option value="P1">Pahlawan 1</option>
-                <option value="P2">Pahlawan 2</option>
-                <option value="P3">Pahlawan 3</option>
-                <option value="P4">Pahlawan 4</option>
+              <div class="mb-3">
+              <label for="ps">Pilih Pahlawan</label>
+               <select class="form-control " id="ps">
+                <option value="P1">Pahlawan 1 |Rp.1.000.000</option>
+                <option value="P2">Pahlawan 2 |Rp.2.000.000</option>
+                <option value="P3">Pahlawan 3 |Rp.3.000.000</option>
+                <option value="P4">Pahlawan 4 |Rp.4.000.000</option>
                </select>
+              </div>
+              <div class="mb-3">
+                <label for="ep">Pilih Energi</label>
+                 <select class="form-control " id="ep">
+                  <option value="b1">Buff 1</option>
+                  <option value="b2">Buff 2</option>
+                  <option value="b3">Buff 3</option>
+                  <option value="b4">Buff 4</option>
+                 </select>
+                </div>
+              <div class="mb-3">
                <label for="tgl">Tanggal Order</label>
-               <input class="form-control mt-2 mb-3" type="date" id="tgl">
+               <input class="form-control " type="date" id="tgl">
+              </div>
+              <div class="mb-3">
                <label for="jmlh">Jumlah Sewa</label>
-               <input type="number" class="form-control mt-2 mb-3" id="jmlh">
+               <input type="number" class="form-control " id="jmlh">
+              </div>
             </div>
             <div class="col-md-6 col sm-12 col-xs-12">
+              <div class="mb-3">
                 <label for="nm">Masukan Nama Anda</label>
-                <input type="text" id="nm" class="form-control mt-2 mb-3">
+                <input type="text" id="nm" class="form-control ">
+              </div>
+              <div class="mb-3">
                 <label for="notlp">Masukan Nama Anda</label>
-                <input type="text" id="notlp" class="form-control mt-2 mb-3">
+                <input type="text" id="notlp" class="form-control ">
+              </div>
+              <div class="mb-3">
                 <label for="mail">Masukan E-mail Anda</label>
-                <input type="email" id="mail" class="form-control mt-2 mb-3">
+                <input type="email" id="mail" class="form-control ">
+              </div>
+            <div class="mb-3">
+              <label for="tot">Total</label>
+              <input type="number" id="tot" class="form-control ">
             </div>
+          </div>
+
             <div class="d-flex justify-content-end gap-2 mt-2">
-              <button type="button" class="btn btn-success mt-3 mb-4">SEWA</button>
-              <button type="button" class="btn btn-danger mt-3 mb-4">CANCEL</button>
+              <button type="button" id="sewa" class="btn btn-success mt-3 mb-4">SEWA</button>
+              <button type="button" id="cancel" class="btn btn-danger mt-3 mb-4">CANCEL</button>
             </div>
         </div>
       </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
+  <script>
+    function hitung (){
+    const jenispaket =document.getElementById("ps").value;
+    console.log(jenispaket);
+    <!-- pengkondisian -->
+
+    let hargaP =0;
+    if(jenispaket ==="P1"){
+      hargaP=1000000
+    } else if(jenispaket==="P2"){
+      hargaP=2000000
+    } else if(jenispaket==="P3"){
+      hargaP=3000000
+    }else{
+      hargaP=4000000
+    }
+    console.log(hargaP)
+
+    const paketbuff=document.getElementById("ep").value;
+    console.log(paketbuff)
+    let hargabuf =0
+    if(paketbuff==="b1"){
+      hargabuf=100000
+    } else if(paketbuff==="b2"){
+      hargabuf=200000
+    } else if(paketbuff==="b3"){
+      hargabuf=300000
+    }else{
+      hargabuf=400000
+    }
+    console.log(hargabuf)
+    }
+    
+  </script>
 </html>
 <!-- ctrlf untuk cari -->
